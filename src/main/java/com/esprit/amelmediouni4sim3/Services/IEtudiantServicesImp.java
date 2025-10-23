@@ -20,8 +20,8 @@ public class IEtudiantServicesImp implements IEtudiantServices {
     }
 
     @Override
-    public Etudiant getEtudiantById(int id) {
-        return etudiantRepository.findById((long) id).orElse(null);
+    public Etudiant getEtudiantById(Long id) {
+        return etudiantRepository.findById(id).orElse(null);
     }
 
     @Override
@@ -30,12 +30,14 @@ public class IEtudiantServicesImp implements IEtudiantServices {
     }
 
     @Override
-    public void deleteEtudiant(Etudiant etudiant) {
-etudiantRepository.delete(etudiant);
+    public void deleteEtudiant(Long id) {
+        etudiantRepository.deleteById(id);
     }
 
     @Override
-    public List<Etudiant> getAllEtudiants() {
+    public List<Etudiant> getAllEtudiant() {
         return etudiantRepository.findAll();
     }
+
+
 }

@@ -7,8 +7,8 @@ import java.util.List;
 
 public interface IEtudiantServices {
     Etudiant addEtudiant(Etudiant etudiant);
-    Etudiant getEtudiantById(int id);
+    Etudiant getEtudiantById(Long id);
     Etudiant updateEtudiant(Etudiant etudiant);
-    void deleteEtudiant(Etudiant etudiant);
-    List<Etudiant> getAllEtudiants();
+    void deleteEtudiant(Long id);
+    List<Etudiant> getAllEtudiant();
 }

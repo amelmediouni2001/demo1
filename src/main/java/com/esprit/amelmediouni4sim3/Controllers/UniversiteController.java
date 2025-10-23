@@ -14,9 +14,5 @@ public class UniversiteController {
     private final IChambreServices iChambreServices;
     private final IUnivesiteServices iUnivesiteServices;
 
-    //@PostMapping()
-    // public Universite universite(@RequestBody Universite universite) {return IUnivesiteServices.addUniversite(universite);}
 
-    //@PutMapping()
-    //public Universite updateUniversite(@RequestBody Universite universite) {return univesiteServices.updateUniversite }
 }
