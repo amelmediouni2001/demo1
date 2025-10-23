@@ -3,14 +3,13 @@ package com.esprit.amelmediouni4sim3.Services;
 import com.esprit.amelmediouni4sim3.Repositories.ChambreRepository;
 import com.esprit.amelmediouni4sim3.entities.Chambre;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 import java.util.List;
 @Service
 @AllArgsConstructor
-public class IChambreServicesImp implements IChambreServices {
+public  class IChambreServicesImp implements IChambreServices {
 
 
     private final ChambreRepository chambreRepository;
@@ -27,9 +26,10 @@ public class IChambreServicesImp implements IChambreServices {
     }
 
     @Override
-    public Chambre getChambreById(int id) {
-        return chambreRepository.findById((long) id).orElse(null);
-    }
+        public Chambre getChambreById(Long id) {
+            return chambreRepository.findById(id).orElse(null);
+        }
+
 
     @Override
     public void deleteChambre(Long id) {
