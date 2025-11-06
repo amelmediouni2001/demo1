@@ -7,8 +7,12 @@ import java.util.List;
 
 public interface IFoyerServices {
     Foyer addFoyer(Foyer foyer);
+
+    Foyer getFoyerById(Long id);
+
     Foyer updateFoyer(Foyer foyer);
-    void deleteFoyer(Foyer foyer);
-    List<Foyer> getAllFoyers();
-    Foyer getFoyer(int id);
+
+    void deleteFoyer(Long id);
+
+    List<Foyer> getAllFoyer();
 }

@@ -9,26 +9,26 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 @AllArgsConstructor
-public  class IChambreServicesImp implements IChambreServices {
 
+public abstract class IChambreServicesImp implements IChambreServices {
 
     private final ChambreRepository chambreRepository;
-
-
     @Override
     public Chambre addChambre(Chambre chambre) {
         return chambreRepository.save(chambre);
     }
 
+
+    @Override
+    public Chambre getChambreById(Long id) {
+        return chambreRepository.findById(id).orElse(null);
+    }
+
+
     @Override
     public Chambre updateChambre(Chambre chambre) {
         return chambreRepository.save(chambre);
     }
-
-    @Override
-        public Chambre getChambreById(Long id) {
-            return chambreRepository.findById(id).orElse(null);
-        }
 
 
     @Override
@@ -38,7 +38,7 @@ public  class IChambreServicesImp implements IChambreServices {
     }
 
     @Override
-    public List<Chambre> findAll() {
+    public List<Chambre> findAllChambre() {
         return chambreRepository.findAll();
     }
 }

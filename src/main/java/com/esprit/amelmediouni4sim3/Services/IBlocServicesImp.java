@@ -21,14 +21,16 @@ private final BlocRepository blocRepository;
     }
 
     @Override
+    public Bloc getBlocById(Long id) {
+
+        return blocRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public Bloc updateBloc(Bloc bloc) {
         return blocRepository.save(bloc);
     }
 
-    @Override
-    public Bloc getBlocById(Long id) {
-        return blocRepository.findById( id).orElse(null);
-    }
 
     @Override
     public void deleteBloc(Long id) {
@@ -36,7 +38,7 @@ private final BlocRepository blocRepository;
     }
 
     @Override
-    public List<Bloc> findAll() {
+    public List<Bloc> getAllBloc() {
         return blocRepository.findAll();
     }
 }

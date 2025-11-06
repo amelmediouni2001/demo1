@@ -15,11 +15,12 @@ public class EtudiantController {
     private final IEtudiantServices etudiantServices;
 
     @PostMapping()
-    public Etudiant etudiant(@RequestBody Etudiant etudiant) {return etudiantServices.addEtudiant(etudiant);}
+    public Etudiant etudiant(@RequestBody Etudiant etudiant)
+    {return etudiantServices.addEtudiant(etudiant);}
 
     @PutMapping()
-    public Etudiant updateEtudiant(@RequestBody Etudiant etudiant) {return etudiantServices.updateEtudiant(etudiant);}
-
+    public Etudiant updateEtudiant(@RequestBody Etudiant etudiant)
+    {return etudiantServices.updateEtudiant(etudiant);}
 
 
     @DeleteMapping("/delete/{id}")

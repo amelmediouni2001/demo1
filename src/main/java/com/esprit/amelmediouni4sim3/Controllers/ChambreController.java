@@ -37,7 +37,7 @@ public class ChambreController {
 
     @GetMapping()
     public List<Chambre> getAllChambre() {
-        return chambreServices.findAll();
+        return chambreServices.getAllChambre();
     }
 
 }
